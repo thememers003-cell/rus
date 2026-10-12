@@ -50,6 +50,11 @@ export const metadata: Metadata = {
     title: `${COMPANY_DATA.name} | ${COMPANY_DATA.tagline}`,
     description: COMPANY_DATA.description,
   },
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
