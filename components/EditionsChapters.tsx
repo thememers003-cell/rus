@@ -52,9 +52,14 @@ export default function EditionsChapters() {
             
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-6 space-y-5">
-                <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
-                  Voice Intelligence Pipeline
-                </span>
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+                    Voice Intelligence Pipeline
+                  </span>
+                  <span className="text-[11px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300">
+                    ₹6 / minute
+                  </span>
+                </div>
                 <h3 className="text-2xl sm:text-4xl font-extrabold text-white leading-tight">
                   Human-grade conversational agents that execute in real time
                 </h3>
@@ -174,9 +179,14 @@ export default function EditionsChapters() {
             
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-6 space-y-5">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#FF8A65]">
-                  Multi-Branch Command & Control
-                </span>
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#FF8A65]">
+                    Multi-Branch Command & Control
+                  </span>
+                  <span className="text-[11px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-[#FF5722]/20 border border-[#FF5722]/40 text-[#FF8A65]">
+                    ₹50 - ₹150 / student (Campus)
+                  </span>
+                </div>
                 <h3 className="text-2xl sm:text-4xl font-extrabold text-white leading-tight">
                   One architecture to connect finances, teams, and supply chains
                 </h3>
@@ -415,9 +425,14 @@ export default function EditionsChapters() {
             
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-6 space-y-5">
-                <span className="text-xs font-bold uppercase tracking-wider text-purple-400">
-                  Headless Print Spooler
-                </span>
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="text-xs font-bold uppercase tracking-wider text-purple-400">
+                    Headless Print Spooler
+                  </span>
+                  <span className="text-[11px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-purple-950/80 border border-purple-500/40 text-purple-300">
+                    ₹100 - ₹10,000 / setup
+                  </span>
+                </div>
                 <h3 className="text-2xl sm:text-4xl font-extrabold text-white leading-tight">
                   No print dialogs. No stuck queues. Direct byte streaming.
                 </h3>

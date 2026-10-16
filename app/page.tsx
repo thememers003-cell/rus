@@ -7,6 +7,7 @@ import FloatingChapterPill from "@/components/FloatingChapterPill";
 import EditionsChapters from "@/components/EditionsChapters";
 import Arc3DShowcase from "@/components/Arc3DShowcase";
 import WorkflowSection from "@/components/WorkflowSection";
+import PricingPlans from "@/components/PricingPlans";
 import BottomCtaBanner from "@/components/BottomCtaBanner";
 
 export default function HomePage() {
@@ -30,10 +31,13 @@ export default function HomePage() {
         {/* 3. INTERACTIVE 3D ARC GALLERY */}
         <Arc3DShowcase />
 
-        {/* 4. ENGINEERING METHODOLOGY */}
+        {/* 4. TRANSPARENT PRICING & MODULAR RATE CARDS */}
+        <PricingPlans />
+
+        {/* 5. ENGINEERING METHODOLOGY */}
         <WorkflowSection />
 
-        {/* 5. HIGH-CONVERTING BOTTOM CTA */}
+        {/* 6. HIGH-CONVERTING BOTTOM CTA */}
         <BottomCtaBanner />
       </div>
     </div>

@@ -14,6 +14,15 @@ export interface CompanyConfig {
     hours: string;
     supportEmail: string;
   };
+  advisor: {
+    name: string;
+    title: string;
+    phone: string;
+    displayPhone: string;
+    email: string;
+    whatsapp: string;
+    label: string;
+  };
   navigation: {
     label: string;
     href: string;
@@ -43,10 +52,19 @@ export const COMPANY_DATA: CompanyConfig = {
     email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "riseupsolutions@zohomail.in",
     infoEmail: process.env.NEXT_PUBLIC_INFO_EMAIL || "info@riseupsolutions.in",
     hrEmail: process.env.NEXT_PUBLIC_HR_EMAIL || "hr@riseupsolutions.in",
-    phone: "",
-    displayPhone: "",
+    phone: "+91 9989876985",
+    displayPhone: "+91 99898 76985",
     hours: "Monday to Saturday, Business Hours IST",
     supportEmail: "info@riseupsolutions.in",
+  },
+  advisor: {
+    name: "GANGALA MANISH KUMAR",
+    title: "Lead Technical & Solutions Advisor",
+    phone: "+91 9989876985",
+    displayPhone: "+91 99898 76985",
+    email: "gangalamanishkumar@gmail.com",
+    whatsapp: "https://wa.me/919989876985",
+    label: "Talk to our Advisor",
   },
   navigation: [
     { label: "Home", href: "/" },

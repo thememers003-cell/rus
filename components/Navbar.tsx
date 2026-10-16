@@ -149,9 +149,12 @@ export default function Navbar({ onOpenDemo }: NavbarProps) {
                           <div className="p-2 rounded-lg bg-white/5 group-hover/item:bg-[#FF5722]/20 transition-colors">
                             {productIcons[product.slug] || <Boxes className="w-5 h-5 text-[#FF8A65]" />}
                           </div>
-                          <div>
-                            <div className="text-sm font-semibold text-white group-hover/item:text-[#FF8A65] transition-colors flex items-center gap-1.5">
-                              {product.name}
+                          <div className="flex-1 min-w-0">
+                            <div className="text-sm font-semibold text-white group-hover/item:text-[#FF8A65] transition-colors flex items-center justify-between gap-1.5">
+                              <span className="truncate">{product.name}</span>
+                              <span className="text-[10px] font-mono text-[#FF8A65] bg-[#FF5722]/15 px-1.5 py-0.5 rounded flex-shrink-0">
+                                {product.pricing.range.split("/")[0].trim()}
+                              </span>
                             </div>
                             <p className="text-xs text-gray-400 line-clamp-1 mt-0.5">
                               {product.tagline}
@@ -162,10 +165,17 @@ export default function Navbar({ onOpenDemo }: NavbarProps) {
                     </div>
 
                     <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs text-gray-400">
-                      <span>Need a custom build or enterprise SLA?</span>
-                      <Link href="/contact" className="text-[#FF8A65] font-medium hover:underline">
-                        Talk to an Architect →
-                      </Link>
+                      <div className="flex items-center gap-1.5">
+                        <span className="text-[#FF8A65] font-semibold">Talk to our Advisor:</span>
+                        <span className="text-white font-medium">{COMPANY_DATA.advisor.name}</span>
+                      </div>
+                      <a 
+                        href={`tel:${COMPANY_DATA.advisor.phone}`} 
+                        className="text-[#FF8A65] font-bold hover:underline flex items-center gap-1"
+                      >
+                        <span>{COMPANY_DATA.advisor.displayPhone}</span>
+                        <span>→</span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -219,6 +229,15 @@ export default function Navbar({ onOpenDemo }: NavbarProps) {
 
           {/* Right Action Buttons */}
           <div className="hidden lg:flex items-center gap-3">
+            <a
+              href={`tel:${COMPANY_DATA.advisor.phone}`}
+              className="hidden xl:flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white border border-white/10 transition-colors"
+              title={`Talk to our Advisor: ${COMPANY_DATA.advisor.name}`}
+            >
+              <PhoneCall className="w-3.5 h-3.5 text-[#FF5722]" />
+              <span>Advisor: {COMPANY_DATA.advisor.displayPhone}</span>
+            </a>
+
             <a
               href={`mailto:${COMPANY_DATA.contact.email}`}
               className="text-xs font-semibold px-3 py-2 text-gray-300 hover:text-white flex items-center gap-1.5 transition-colors"

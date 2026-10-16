@@ -47,12 +47,87 @@ export default function ContactPage() {
 
           {/* Right: Direct Channels & SLA (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
+            {/* Talk to our Advisor Featured Box */}
+            <div className="rounded-2xl p-6 sm:p-7 bg-gradient-to-br from-[#1C1D26] via-[#14151B] to-[#0E0F14] border-2 border-[#FF5722]/50 shadow-2xl space-y-5 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-44 h-44 bg-[#FF5722]/15 blur-[60px] pointer-events-none rounded-full" />
+              
+              <div className="flex items-center justify-between">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FF5722]/20 border border-[#FF5722]/40 text-[11px] font-bold text-[#FF8A65]">
+                  <Sparkles className="w-3.5 h-3.5 text-[#FF5722]" />
+                  <span>Talk to our Advisor</span>
+                </div>
+                <span className="text-[10px] text-emerald-400 font-mono flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" /> Direct Line
+                </span>
+              </div>
+
+              <div className="flex items-start gap-3.5">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#FF5722] to-[#FF8A65] flex items-center justify-center text-white font-black text-lg shadow-md flex-shrink-0">
+                  GM
+                </div>
+                <div>
+                  <h3 className="text-lg font-black text-white">GANGALA MANISH KUMAR</h3>
+                  <p className="text-xs font-semibold text-[#FF8A65]">{COMPANY_DATA.advisor.title}</p>
+                  <p className="text-[11px] text-gray-400 mt-1">Direct architecture scoping, pricing & pilots</p>
+                </div>
+              </div>
+
+              {/* Direct Quick Buttons */}
+              <div className="space-y-2.5 pt-1">
+                <a
+                  href={`tel:${COMPANY_DATA.advisor.phone}`}
+                  className="w-full py-3 px-4 rounded-xl bg-[#FF5722] hover:bg-[#FF6D3B] text-white text-xs sm:text-sm font-extrabold flex items-center justify-center gap-2 shadow-lg shadow-[#FF5722]/30 transition-all transform hover:-translate-y-0.5"
+                >
+                  <Phone className="w-4 h-4" />
+                  <span>Call {COMPANY_DATA.advisor.displayPhone}</span>
+                </a>
+
+                <div className="grid grid-cols-2 gap-2">
+                  <a
+                    href={COMPANY_DATA.advisor.whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center justify-center gap-1.5 transition-all text-center"
+                  >
+                    <span>WhatsApp</span>
+                  </a>
+
+                  <a
+                    href={`mailto:${COMPANY_DATA.advisor.email}`}
+                    className="py-2.5 px-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 hover:text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition-all truncate"
+                  >
+                    <Mail className="w-3.5 h-3.5 text-[#FF8A65]" />
+                    <span className="truncate">Email Advisor</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Pricing Guidance Micro List */}
+              <div className="pt-3 border-t border-white/10 space-y-1.5 text-[11px]">
+                <span className="text-gray-400 font-mono uppercase text-[10px] block font-semibold">
+                  Platform Pricing Reference:
+                </span>
+                <div className="flex justify-between text-gray-300">
+                  <span>Cloud Printing:</span>
+                  <span className="font-mono text-white font-semibold">₹100 - ₹10,000 / setup</span>
+                </div>
+                <div className="flex justify-between text-gray-300">
+                  <span>Voice AI Agent:</span>
+                  <span className="font-mono text-white font-semibold">₹6 / minute</span>
+                </div>
+                <div className="flex justify-between text-gray-300">
+                  <span>Academic ERP:</span>
+                  <span className="font-mono text-white font-semibold">₹50 - ₹150 / student</span>
+                </div>
+              </div>
+            </div>
+
             {/* Direct Contact Card */}
             <div className="glass-panel rounded-2xl p-6 sm:p-8 border border-brand-navy-border/80 bg-[#0F192E]/90 space-y-6 shadow-xl">
               <div>
-                <h3 className="text-lg font-bold text-white mb-1">Direct Communication</h3>
+                <h3 className="text-lg font-bold text-white mb-1">Company Inquiries</h3>
                 <p className="text-xs text-gray-400">
-                  Speak directly with technical support and client strategy specialists.
+                  Official corporate channels & department emails.
                 </p>
               </div>
 

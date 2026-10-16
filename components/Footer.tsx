@@ -118,8 +118,32 @@ export default function Footer() {
               </div>
             </div>
 
+            {/* Advisor Direct Contact Box in Footer */}
+            <div className="p-3.5 rounded-2xl bg-white/[0.04] border border-[#FF5722]/30 space-y-1.5 shadow-lg">
+              <span className="text-[10px] font-mono uppercase tracking-wider text-[#FF8A65] font-bold block">
+                Talk to our Advisor
+              </span>
+              <div className="text-sm font-bold text-white">
+                {COMPANY_DATA.advisor.name}
+              </div>
+              <div className="flex flex-col gap-1 text-xs">
+                <a
+                  href={`tel:${COMPANY_DATA.advisor.phone}`}
+                  className="text-gray-300 hover:text-[#FF8A65] font-mono font-semibold transition-colors"
+                >
+                  {COMPANY_DATA.advisor.displayPhone}
+                </a>
+                <a
+                  href={`mailto:${COMPANY_DATA.advisor.email}`}
+                  className="text-gray-400 hover:text-white transition-colors truncate"
+                >
+                  {COMPANY_DATA.advisor.email}
+                </a>
+              </div>
+            </div>
+
             {/* System Status Beacon */}
-            <div className="pt-3">
+            <div className="pt-1">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-950/40 border border-emerald-500/30 text-[11px] text-emerald-300">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                 <Server className="w-3 h-3 text-emerald-400" />
@@ -128,19 +152,22 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Products Column */}
+          {/* Products Column with Pricing */}
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider text-white mb-4">
-              Products
+              Products & Pricing
             </h4>
             <ul className="space-y-2.5 text-sm">
               {PRODUCTS_DATA.map((product) => (
                 <li key={product.id}>
                   <Link
                     href={`/products/${product.slug}`}
-                    className="text-gray-400 hover:text-[#FF8A65] transition-colors"
+                    className="text-gray-400 hover:text-[#FF8A65] transition-colors flex items-center justify-between text-xs group"
                   >
-                    {product.name}
+                    <span className="group-hover:text-white transition-colors">{product.name}</span>
+                    <span className="text-[10px] font-mono text-[#FF8A65] bg-[#FF5722]/10 px-1.5 py-0.5 rounded border border-[#FF5722]/20">
+                      {product.pricing.range.split("/")[0].trim()}
+                    </span>
                   </Link>
                 </li>
               ))}

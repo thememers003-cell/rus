@@ -9,6 +9,15 @@ export interface ProductMetric {
   label: string;
 }
 
+export interface ProductPricing {
+  startingAt: string;
+  unit: string;
+  range: string;
+  badge: string;
+  billingNote: string;
+  features?: string[];
+}
+
 export interface ProductItem {
   id: string;
   slug: string;
@@ -19,6 +28,7 @@ export interface ProductItem {
   summary: string;
   description: string;
   accentColor: string;
+  pricing: ProductPricing;
   metrics: ProductMetric[];
   keyFeatures: ProductFeature[];
   technicalSpecs: {
@@ -49,6 +59,19 @@ export const PRODUCTS_DATA: ProductItem[] = [
     description:
       "RiseVoice AI replaces rigid IVR menus with ultra-responsive conversational voice agents trained on your business knowledge base. Supporting sub-250ms latency, multilingual conversational fluency, and direct telephony CRM integration, it scales customer engagement while slashing operational overhead.",
     accentColor: "from-blue-600 to-cyan-500",
+    pricing: {
+      startingAt: "₹6",
+      unit: "/ minute",
+      range: "₹6 / minute",
+      badge: "₹6 / Min",
+      billingNote: "Zero upfront commitment. Pure pay-as-you-go conversational voice AI with sub-200ms latency. High-volume enterprise discounts available.",
+      features: [
+        "Sub-200ms real-time conversational streaming",
+        "Multilingual dialogue support (35+ languages)",
+        "Bi-directional CRM & calendar sync",
+        "Zero minimum contract or hidden setup fees",
+      ],
+    },
     metrics: [
       { value: "<200ms", label: "Speech-to-Speech Latency" },
       { value: "94.8%", label: "First-Call Resolution" },
@@ -120,6 +143,19 @@ export const PRODUCTS_DATA: ProductItem[] = [
     description:
       "Designed for agile retail chains, wholesale distributors, and multi-location businesses. RiseERP eliminates fragmented spreadsheets by syncing point-of-sale terminals, inventory stock levels, automated supplier purchase orders, and consolidated accounting into a unified real-time dashboard.",
     accentColor: "from-indigo-600 to-blue-500",
+    pricing: {
+      startingAt: "₹999",
+      unit: "/ branch / month",
+      range: "₹999 - ₹4,999 / month",
+      badge: "Modular ERP",
+      billingNote: "Cost-effective branch & warehouse licensing with real-time multi-channel inventory, high-speed touchscreen POS, and automated GST billing.",
+      features: [
+        "Multi-outlet POS with offline resilience",
+        "Live centralized warehouse inventory",
+        "Automated GST & e-invoicing compliance",
+        "Role-based staff permissions & audit trails",
+      ],
+    },
     metrics: [
       { value: "99.99%", label: "System Uptime" },
       { value: "-68%", label: "Inventory Stockout Rate" },
@@ -190,6 +226,19 @@ export const PRODUCTS_DATA: ProductItem[] = [
     description:
       "RiseEdu Suite brings administrators, faculty, students, and parents into one cohesive digital ecosystem. From online admission pipelines and timetable scheduling to automated fee reconciliation and real-time student safety notifications, education management has never been more intuitive.",
     accentColor: "from-blue-700 to-indigo-600",
+    pricing: {
+      startingAt: "₹50",
+      unit: "/ student",
+      range: "₹50 - ₹150 / student",
+      badge: "₹50 - ₹150 / Student",
+      billingNote: "Starts at ₹50 and scales up to ₹150 per student depending on institutional enrollment size and modules activated (admissions, RFID attendance, fee portal).",
+      features: [
+        "Digital fee reconciliation & instant receipts",
+        "Biometric & RFID school gate/bus tracking",
+        "Parent portal with instant WhatsApp circulars",
+        "Examination gradebook & automated report cards",
+      ],
+    },
     metrics: [
       { value: "100%", label: "Digital Fee Reconciliation" },
       { value: "-85%", label: "Administrative Paperwork" },
@@ -260,6 +309,19 @@ export const PRODUCTS_DATA: ProductItem[] = [
     description:
       "Whether managing delivery vans, construction machinery, school transport, or long-haul trucks, RiseTrack gives dispatchers total control over vehicle operations. Real-time geofencing, fuel theft sensors, speed breach alerts, and preventative maintenance reminders safeguard assets while lowering fuel expenditure.",
     accentColor: "from-sky-600 to-blue-700",
+    pricing: {
+      startingAt: "₹299",
+      unit: "/ vehicle / month",
+      range: "₹299 - ₹499 / vehicle",
+      badge: "Per Asset / Mo",
+      billingNote: "Cost per vehicle with AIS-140 compliance support, 3-second live GPS polling, fuel loss detection, and maintenance scheduling.",
+      features: [
+        "3-second high-speed GPS map telemetry",
+        "Predictive geofencing & perimeter breach alerts",
+        "Driver behavior & fuel siphon monitoring",
+        "Historical trajectory playback & exportable logs",
+      ],
+    },
     metrics: [
       { value: "3s", label: "Telemetry Refresh Interval" },
       { value: "-22%", label: "Average Fuel Consumption" },
@@ -331,6 +393,19 @@ export const PRODUCTS_DATA: ProductItem[] = [
     description:
       "Traditional web applications struggle with hardware printer communication across corporate firewalls. RiseCloud Print provides an ultra-lightweight hardware agent and cloud relay API that routes print jobs to thermal POS printers, barcode label machines, and laser printers globally with zero driver headaches.",
     accentColor: "from-blue-600 to-indigo-700",
+    pricing: {
+      startingAt: "₹100",
+      unit: "/ kiosk or setup",
+      range: "₹100 - ₹10,000",
+      badge: "₹100 - ₹10,000",
+      billingNote: "Starts at ₹100 for individual kiosk, single-terminal, and thermal relays, scaling up to ₹10,000 for enterprise multi-outlet clusters and automated warehouses.",
+      features: [
+        "Zero static IP or router port forwarding needed",
+        "Sub-350ms dispatch-to-print execution",
+        "Native ESC/POS & Zebra ZPL protocol formatting",
+        "Automatic paper-jam & offline hardware rerouting",
+      ],
+    },
     metrics: [
       { value: "<350ms", label: "Dispatch-to-Print Time" },
       { value: "0", label: "Static IP Requirements" },
@@ -402,6 +477,19 @@ export const PRODUCTS_DATA: ProductItem[] = [
     description:
       "When off-the-shelf software falls short of your distinct business model, RiseUp Solutions builds bespoke software engineered around your exact workflow. We leverage modern tech stacks (Next.js, TypeScript, Node.js, Go, Python, React Native, AWS) to construct robust, high-performance platforms that scale cleanly.",
     accentColor: "from-blue-600 to-sky-500",
+    pricing: {
+      startingAt: "₹49,000",
+      unit: "/ sprint milestone",
+      range: "Custom Milestone / Sprint",
+      badge: "Sprint & Milestone",
+      billingNote: "Full intellectual property handover, transparent sprint delivery cycles, automated test coverage, and continuous cloud deployment.",
+      features: [
+        "100% complete source code & IP ownership handover",
+        "Modern cloud microservices & scalable Next.js UI",
+        "Role-based customer & partner portal architecture",
+        "Dedicated full-stack tech lead & DevOps hypercare",
+      ],
+    },
     metrics: [
       { value: "100%", label: "IP Ownership Handover" },
       { value: "0", label: "Technical Debt Compromises" },

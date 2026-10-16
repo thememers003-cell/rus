@@ -48,4 +48,18 @@ export const FAQ_DATA: FAQItem[] = [
     answer:
       "Yes. We support turnkey bi-directional integrations with Salesforce, HubSpot, QuickBooks, Shopify, Zoho, and provide comprehensive REST and GraphQL APIs with webhook event streaming.",
   },
+  {
+    id: "faq-7",
+    category: "General",
+    question: "What is the pricing structure for Cloud Printing, Voice AI, and ERP platforms?",
+    answer:
+      "We provide modular, transparent pricing tailored to actual operational usage: RiseCloud Print ranges from ₹100 for kiosk and lightweight relays up to ₹10,000 for enterprise multi-outlet clusters; RiseVoice AI is billed at ₹6 per minute pay-as-you-go; and RiseEdu Suite starts at ₹50 to ₹150 per student. Talk to our advisor GANGALA MANISH KUMAR (+91 9989876985 / gangalamanishkumar@gmail.com) for tailored institutional quotes.",
+  },
+  {
+    id: "faq-8",
+    category: "General",
+    question: "How can I speak directly with your technical advisor?",
+    answer:
+      "You can connect directly with our Lead Solutions Advisor, GANGALA MANISH KUMAR, at +91 9989876985 or by email at gangalamanishkumar@gmail.com. We offer free feasibility assessments, pilot sandbox demonstrations, and customized deployment blueprints.",
+  },
 ];

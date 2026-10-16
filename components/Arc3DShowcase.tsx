@@ -22,9 +22,12 @@ import {
   Zap,
   Layers,
   Activity,
-  Cpu
+  Cpu,
+  Phone,
+  Mail
 } from "lucide-react";
 import { PRODUCTS_DATA, ProductItem } from "@/data/products";
+import { COMPANY_DATA } from "@/data/company";
 
 // Product visual pairings matching the products
 const PRODUCT_VISUALS: Record<string, { image: string; icon: React.ReactNode; color: string }> = {
@@ -340,8 +343,16 @@ export default function Arc3DShowcase() {
                     </p>
                   </div>
 
+                  {/* Pricing Callout Pill */}
+                  <div className="flex items-center justify-between p-2 rounded-xl bg-white/[0.04] border border-white/5 my-1.5">
+                    <span className="text-[10px] font-mono uppercase text-gray-400">Pricing:</span>
+                    <span className="text-xs font-mono font-bold text-white group-hover:text-[#FF8A65] transition-colors">
+                      {product.pricing.range}
+                    </span>
+                  </div>
+
                   {/* Feature Checklist */}
-                  <div className="pt-2.5 pb-1 space-y-1">
+                  <div className="pt-1 pb-1 space-y-1">
                     {product.keyFeatures.slice(0, 2).map((feat, i) => (
                       <div key={i} className="flex items-center gap-2 text-[11px] text-gray-300 truncate">
                         <CheckCircle2 className="w-3.5 h-3.5 text-[#FF5722] flex-shrink-0" />
@@ -463,6 +474,58 @@ export default function Arc3DShowcase() {
                     <span className="font-semibold text-[#FF8A65]">{selectedProduct.technicalSpecs.latency}</span>
                   </div>
                 )}
+              </div>
+            </div>
+
+            {/* Official Pricing Callout */}
+            <div className="mb-6 p-4 rounded-2xl bg-gradient-to-r from-[#FF5722]/15 via-[#FF8A65]/10 to-[#121317] border border-[#FF5722]/30 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div>
+                <span className="text-[10px] font-mono uppercase tracking-wider text-gray-300 block">
+                  Official Platform Pricing
+                </span>
+                <span className="text-xl sm:text-2xl font-black text-white font-mono">
+                  {selectedProduct.pricing.range}
+                </span>
+                <p className="text-[11px] text-gray-300 mt-0.5">
+                  {selectedProduct.pricing.billingNote}
+                </p>
+              </div>
+              <span className="self-start sm:self-center text-xs font-bold font-mono px-3 py-1 rounded-full bg-[#FF5722] text-white whitespace-nowrap">
+                {selectedProduct.pricing.badge}
+              </span>
+            </div>
+
+            {/* Direct Advisor Assistance Box */}
+            <div className="mb-6 p-4 rounded-2xl bg-black/50 border border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-[#FF5722] flex items-center justify-center text-white font-black text-sm">
+                  GM
+                </div>
+                <div>
+                  <span className="text-[10px] uppercase font-mono text-[#FF8A65] font-bold block">
+                    Talk to our Advisor
+                  </span>
+                  <div className="text-sm font-bold text-white">GANGALA MANISH KUMAR</div>
+                  <div className="text-xs text-gray-400">{COMPANY_DATA.advisor.phone}</div>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2 w-full sm:w-auto">
+                <a
+                  href={`tel:${COMPANY_DATA.advisor.phone}`}
+                  className="px-4 py-2 rounded-xl bg-[#FF5722] hover:bg-[#FF6D3B] text-white text-xs font-bold transition-colors flex items-center gap-1.5 flex-1 sm:flex-none justify-center"
+                >
+                  <Phone className="w-3.5 h-3.5" />
+                  <span>Call</span>
+                </a>
+                <a
+                  href={COMPANY_DATA.advisor.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-colors flex-1 sm:flex-none text-center"
+                >
+                  WhatsApp
+                </a>
               </div>
             </div>
 
