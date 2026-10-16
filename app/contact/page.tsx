@@ -108,16 +108,28 @@ export default function ContactPage() {
                   Platform Pricing Reference:
                 </span>
                 <div className="flex justify-between text-gray-300">
-                  <span>Cloud Printing:</span>
-                  <span className="font-mono text-white font-semibold">₹100 - ₹10,000 / setup</span>
+                  <span>Voice AI Agent:</span>
+                  <span className="font-mono text-white font-semibold">₹6 - ₹15 / minute</span>
                 </div>
                 <div className="flex justify-between text-gray-300">
-                  <span>Voice AI Agent:</span>
-                  <span className="font-mono text-white font-semibold">₹6 / minute</span>
+                  <span>Business ERP:</span>
+                  <span className="font-mono text-white font-semibold">₹999 - ₹4,999 / mo</span>
                 </div>
                 <div className="flex justify-between text-gray-300">
                   <span>Academic ERP:</span>
                   <span className="font-mono text-white font-semibold">₹50 - ₹150 / student</span>
+                </div>
+                <div className="flex justify-between text-gray-300">
+                  <span>Fleet Telematics:</span>
+                  <span className="font-mono text-white font-semibold">₹299 - ₹499 / vehicle</span>
+                </div>
+                <div className="flex justify-between text-gray-300">
+                  <span>Cloud Printing:</span>
+                  <span className="font-mono text-white font-semibold">₹100 - ₹10,000 / setup</span>
+                </div>
+                <div className="flex justify-between text-gray-300">
+                  <span>Bespoke Engineering:</span>
+                  <span className="font-mono text-white font-semibold">₹49K - ₹2.5L / milestone</span>
                 </div>
               </div>
             </div>

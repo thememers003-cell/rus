@@ -173,7 +173,7 @@ export default function ProductsPage() {
                 Talk to Our Advisor: <span className="text-[#FF8A65]">GANGALA MANISH KUMAR</span>
               </h2>
               <p className="text-sm text-gray-300 leading-relaxed">
-                Need customized quotes for Cloud Printing (<span className="text-white font-semibold">₹100 to ₹10,000</span>), Voice AI (<span className="text-white font-semibold">₹6 / min</span>), or Academic ERP (<span className="text-white font-semibold">₹50 - ₹150 / student</span>)? Connect directly with our lead advisor for tailored volume pricing and deployment planning.
+                Need customized quotes for Cloud Printing (<span className="text-white font-semibold">₹100 to ₹10,000</span>), Voice AI (<span className="text-white font-semibold">₹6 - ₹15 / min</span>), Academic ERP (<span className="text-white font-semibold">₹50 - ₹150 / student</span>), or Bespoke Engineering (<span className="text-white font-semibold">₹49,000 - ₹2,50,000</span>)? Connect directly with our lead advisor for tailored volume pricing and deployment planning.
               </p>
 
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">

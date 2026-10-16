@@ -64,7 +64,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         <div className="mb-5 p-3.5 rounded-2xl bg-gradient-to-r from-[#181922] via-[#14151C] to-[#101116] border border-white/10 group-hover:border-[#FF5722]/40 transition-colors flex items-center justify-between shadow-inner">
           <div>
             <span className="text-[10px] font-mono uppercase tracking-wider text-gray-400 block">
-              Pricing Model
+              Price Range (Min — Max)
             </span>
             <div className="text-sm sm:text-base font-black text-white font-mono tracking-tight group-hover:text-[#FF8A65] transition-colors">
               {product.pricing.range}

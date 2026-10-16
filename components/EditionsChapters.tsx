@@ -57,7 +57,7 @@ export default function EditionsChapters() {
                     Voice Intelligence Pipeline
                   </span>
                   <span className="text-[11px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300">
-                    ₹6 / minute
+                    ₹6 - ₹15 / minute
                   </span>
                 </div>
                 <h3 className="text-2xl sm:text-4xl font-extrabold text-white leading-tight">

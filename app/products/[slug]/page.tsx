@@ -107,10 +107,10 @@ export default function ProductDetailPage({ params }: Props) {
             {/* Key Metrics & Pricing Highlight Card */}
             <div className="w-full lg:w-80 glass-panel rounded-2xl p-6 border border-brand-navy-border/80 bg-[#0F192E]/90 space-y-4 shadow-xl">
               {/* Pricing Callout */}
-              <div className="p-3.5 rounded-xl bg-gradient-to-r from-[#FF5722]/20 to-[#FF8A65]/10 border border-[#FF5722]/30 space-y-1">
+              <div className="p-3.5 rounded-xl bg-gradient-to-r from-[#FF5722]/20 to-[#FF8A65]/10 border border-[#FF5722]/30 space-y-1.5">
                 <div className="flex items-center justify-between">
                   <span className="text-[10px] font-mono uppercase tracking-wider text-gray-300">
-                    Transparent Pricing
+                    Transparent Pricing (Min - Max)
                   </span>
                   <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-[#FF5722] text-white">
                     {product.pricing.badge}
@@ -118,6 +118,12 @@ export default function ProductDetailPage({ params }: Props) {
                 </div>
                 <div className="text-xl sm:text-2xl font-black text-white font-mono">
                   {product.pricing.range}
+                </div>
+                <div className="flex items-center justify-between text-[11px] font-mono py-1 px-2.5 rounded-lg bg-black/40 border border-white/5 text-gray-300">
+                  <span>Min: <strong className="text-emerald-400 font-bold">{product.pricing.minPrice}</strong></span>
+                  <span className="text-gray-500">•</span>
+                  <span>Max: <strong className="text-[#FF8A65] font-bold">{product.pricing.maxPrice}</strong></span>
+                  <span className="text-gray-400 text-[10px]">{product.pricing.unit}</span>
                 </div>
                 <p className="text-[11px] text-gray-300 leading-tight">
                   {product.pricing.billingNote}
@@ -346,13 +352,19 @@ export default function ProductDetailPage({ params }: Props) {
               </p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-black/60 border border-white/10 text-right">
+            <div className="p-4 rounded-2xl bg-black/60 border border-white/10 text-right space-y-1">
               <span className="text-[10px] font-mono uppercase text-gray-400 block tracking-wider">
-                Official Tier Starting Point
+                Official Price Range (Min — Max)
               </span>
-              <span className="text-2xl sm:text-3xl font-black text-[#FF8A65] font-mono">
+              <span className="text-2xl sm:text-3xl font-black text-[#FF8A65] font-mono block">
                 {product.pricing.range}
               </span>
+              <div className="flex items-center justify-end gap-3 text-xs font-mono text-gray-300 pt-1">
+                <span>Min: <strong className="text-emerald-400 font-bold">{product.pricing.minPrice}</strong></span>
+                <span className="text-gray-600">•</span>
+                <span>Max: <strong className="text-[#FF8A65] font-bold">{product.pricing.maxPrice}</strong></span>
+                <span className="text-gray-400 text-[11px]">{product.pricing.unit}</span>
+              </div>
             </div>
           </div>
 

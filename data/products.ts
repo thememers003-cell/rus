@@ -12,6 +12,8 @@ export interface ProductMetric {
 export interface ProductPricing {
   startingAt: string;
   unit: string;
+  minPrice: string;
+  maxPrice: string;
   range: string;
   badge: string;
   billingNote: string;
@@ -62,9 +64,11 @@ export const PRODUCTS_DATA: ProductItem[] = [
     pricing: {
       startingAt: "₹6",
       unit: "/ minute",
-      range: "₹6 / minute",
-      badge: "₹6 / Min",
-      billingNote: "Zero upfront commitment. Pure pay-as-you-go conversational voice AI with sub-200ms latency. High-volume enterprise discounts available.",
+      minPrice: "₹6",
+      maxPrice: "₹15",
+      range: "₹6 - ₹15 / minute",
+      badge: "₹6 - ₹15 / Min",
+      billingNote: "Starts at ₹6/minute for standard conversational streaming up to ₹15/minute for sub-150ms ultra-low latency models and custom voice cloning. Zero upfront commitment with enterprise volume tiers.",
       features: [
         "Sub-200ms real-time conversational streaming",
         "Multilingual dialogue support (35+ languages)",
@@ -146,9 +150,11 @@ export const PRODUCTS_DATA: ProductItem[] = [
     pricing: {
       startingAt: "₹999",
       unit: "/ branch / month",
+      minPrice: "₹999",
+      maxPrice: "₹4,999",
       range: "₹999 - ₹4,999 / month",
-      badge: "Modular ERP",
-      billingNote: "Cost-effective branch & warehouse licensing with real-time multi-channel inventory, high-speed touchscreen POS, and automated GST billing.",
+      badge: "₹999 - ₹4,999 / Mo",
+      billingNote: "Modular branch & warehouse licensing ranging from ₹999/month for single retail counter up to ₹4,999/month for enterprise multi-warehouse sync, touchscreen POS, and automated GST e-invoicing.",
       features: [
         "Multi-outlet POS with offline resilience",
         "Live centralized warehouse inventory",
@@ -229,6 +235,8 @@ export const PRODUCTS_DATA: ProductItem[] = [
     pricing: {
       startingAt: "₹50",
       unit: "/ student",
+      minPrice: "₹50",
+      maxPrice: "₹150",
       range: "₹50 - ₹150 / student",
       badge: "₹50 - ₹150 / Student",
       billingNote: "Starts at ₹50 and scales up to ₹150 per student depending on institutional enrollment size and modules activated (admissions, RFID attendance, fee portal).",
@@ -312,9 +320,11 @@ export const PRODUCTS_DATA: ProductItem[] = [
     pricing: {
       startingAt: "₹299",
       unit: "/ vehicle / month",
+      minPrice: "₹299",
+      maxPrice: "₹499",
       range: "₹299 - ₹499 / vehicle",
-      badge: "Per Asset / Mo",
-      billingNote: "Cost per vehicle with AIS-140 compliance support, 3-second live GPS polling, fuel loss detection, and maintenance scheduling.",
+      badge: "₹299 - ₹499 / Mo",
+      billingNote: "Ranging from ₹299/month for core GPS fleet telemetry up to ₹499/month with AIS-140 compliance, 3-second live polling, fuel siphon sensors, and automated maintenance scheduling.",
       features: [
         "3-second high-speed GPS map telemetry",
         "Predictive geofencing & perimeter breach alerts",
@@ -396,7 +406,9 @@ export const PRODUCTS_DATA: ProductItem[] = [
     pricing: {
       startingAt: "₹100",
       unit: "/ kiosk or setup",
-      range: "₹100 - ₹10,000",
+      minPrice: "₹100",
+      maxPrice: "₹10,000",
+      range: "₹100 - ₹10,000 / setup",
       badge: "₹100 - ₹10,000",
       billingNote: "Starts at ₹100 for individual kiosk, single-terminal, and thermal relays, scaling up to ₹10,000 for enterprise multi-outlet clusters and automated warehouses.",
       features: [
@@ -479,10 +491,12 @@ export const PRODUCTS_DATA: ProductItem[] = [
     accentColor: "from-blue-600 to-sky-500",
     pricing: {
       startingAt: "₹49,000",
-      unit: "/ sprint milestone",
-      range: "Custom Milestone / Sprint",
-      badge: "Sprint & Milestone",
-      billingNote: "Full intellectual property handover, transparent sprint delivery cycles, automated test coverage, and continuous cloud deployment.",
+      unit: "/ milestone",
+      minPrice: "₹49,000",
+      maxPrice: "₹2,50,000",
+      range: "₹49,000 - ₹2,50,000 / milestone",
+      badge: "₹49K - ₹2.5L / Milestone",
+      billingNote: "Starts at ₹49,000 for focused 2-week MVP sprint modules up to ₹2,50,000 for high-load multi-service platform architectures with 100% IP ownership handover.",
       features: [
         "100% complete source code & IP ownership handover",
         "Modern cloud microservices & scalable Next.js UI",

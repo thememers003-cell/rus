@@ -270,9 +270,14 @@ export default function PricingPlans() {
                   </h4>
 
                   <div className="p-3 rounded-xl bg-black/40 border border-white/5 space-y-1">
-                    <span className="text-[10px] uppercase font-mono text-gray-400 block">
-                      Starting Rate
-                    </span>
+                    <div className="flex items-center justify-between">
+                      <span className="text-[10px] uppercase font-mono text-gray-400 block">
+                        Price Range (Min — Max)
+                      </span>
+                      <span className="text-[9px] font-mono text-[#FF8A65]">
+                        {product.pricing.unit}
+                      </span>
+                    </div>
                     <div className="text-xl font-black text-white font-mono">
                       {product.pricing.range}
                     </div>

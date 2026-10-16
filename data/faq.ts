@@ -53,7 +53,7 @@ export const FAQ_DATA: FAQItem[] = [
     category: "General",
     question: "What is the pricing structure for Cloud Printing, Voice AI, and ERP platforms?",
     answer:
-      "We provide modular, transparent pricing tailored to actual operational usage: RiseCloud Print ranges from ₹100 for kiosk and lightweight relays up to ₹10,000 for enterprise multi-outlet clusters; RiseVoice AI is billed at ₹6 per minute pay-as-you-go; and RiseEdu Suite starts at ₹50 to ₹150 per student. Talk to our advisor GANGALA MANISH KUMAR (+91 9989876985 / gangalamanishkumar@gmail.com) for tailored institutional quotes.",
+      "We provide modular, transparent min-max pricing tailored to actual operational usage: RiseVoice AI ranges from ₹6 to ₹15 per minute; RiseERP Omnichannel ranges from ₹999 to ₹4,999 per month; RiseEdu Suite ranges from ₹50 to ₹150 per student; RiseTrack Telematics ranges from ₹299 to ₹499 per vehicle; RiseCloud Print ranges from ₹100 up to ₹10,000 per setup; and RiseBespoke Engineering ranges from ₹49,000 to ₹2,50,000 per milestone. Talk to our advisor GANGALA MANISH KUMAR (+91 9989876985 / gangalamanishkumar@gmail.com) for tailored quotes.",
   },
   {
     id: "faq-8",
