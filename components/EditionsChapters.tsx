@@ -46,7 +46,7 @@ export default function EditionsChapters() {
         </div>
 
         {/* Feature Hero Card */}
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div id="chapter-voice" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-28">
           <div className="rounded-3xl bg-[#0F1014] border border-white/10 p-6 sm:p-10 shadow-2xl relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 blur-[120px] pointer-events-none rounded-full" />
             

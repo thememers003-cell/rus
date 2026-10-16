@@ -23,7 +23,7 @@ const PLANS: PlanItem[] = [
   {
     id: "launch",
     name: "Rapid Launch",
-    price: "$2,990",
+    price: "₹49,000",
     period: "/ sprint",
     tagline: "Ideal for fast MVP validation, dedicated microservice, or voice bot deployment.",
     features: [
@@ -39,7 +39,7 @@ const PLANS: PlanItem[] = [
   {
     id: "growth-engine",
     name: "Growth & Scale Engine",
-    price: "$4,990",
+    price: "₹1,49,000",
     period: "/ month",
     tagline: "Our most requested tier. Complete end-to-end automation & scalable architecture.",
     isPopular: true,
@@ -57,7 +57,7 @@ const PLANS: PlanItem[] = [
   {
     id: "enterprise-titan",
     name: "Enterprise Architecture",
-    price: "$6,990",
+    price: "₹2,49,000",
     period: "/ engagement",
     tagline: "Bespoke high-scale enterprise systems engineered for millions of users.",
     features: [
@@ -142,7 +142,7 @@ export default function PricingPlans() {
 
                     <div className="flex items-baseline gap-2">
                       <span className="text-4xl sm:text-5xl font-black tracking-tight text-white">
-                        {billingCycle === "annual" ? "$3,990" : plan.price}
+                        {billingCycle === "annual" ? "₹1,19,000" : plan.price}
                       </span>
                       <span className="text-sm font-medium text-white/80">{plan.period}</span>
                     </div>
@@ -195,7 +195,7 @@ export default function PricingPlans() {
                   <div className="flex items-baseline gap-2">
                     <span className="text-4xl sm:text-5xl font-black tracking-tight text-white font-display">
                       {billingCycle === "annual" 
-                        ? plan.id === "launch" ? "$2,390" : "$5,590"
+                        ? plan.id === "launch" ? "₹39,000" : "₹1,99,000"
                         : plan.price}
                     </span>
                     <span className="text-sm font-medium text-gray-400">{plan.period}</span>

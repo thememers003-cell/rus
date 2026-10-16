@@ -8,13 +8,13 @@ import TiltCard from "./TiltCard";
 export default function RoiCalculator() {
   const [teamSize, setTeamSize] = useState<number>(25);
   const [manualHours, setManualHours] = useState<number>(12);
-  const [hourlyRate, setHourlyRate] = useState<number>(45);
+  const [hourlyRate, setHourlyRate] = useState<number>(500);
 
   // Calculate: RiseUp automation typically recovers ~65% of manual operational hours
   const automationEfficiency = 0.65;
   const weeklyHoursSaved = Math.round(teamSize * manualHours * automationEfficiency);
   const annualHoursSaved = weeklyHoursSaved * 50;
-  const annualDollarSavings = Math.round(annualHoursSaved * hourlyRate);
+  const annualSavings = Math.round(annualHoursSaved * hourlyRate);
 
   return (
     <div className="rounded-3xl p-6 sm:p-10 border border-white/10 bg-[#121316] shadow-2xl">
@@ -83,21 +83,21 @@ export default function RoiCalculator() {
             <div className="space-y-2">
               <div className="flex justify-between text-xs font-medium">
                 <span className="text-gray-300">Blended Hourly Labor Cost</span>
-                <span className="text-[#FF8A65] font-bold font-mono text-sm">${hourlyRate} / hr</span>
+                <span className="text-[#FF8A65] font-bold font-mono text-sm">₹{hourlyRate} / hr</span>
               </div>
               <input
                 type="range"
-                min="18"
-                max="120"
-                step="2"
+                min="150"
+                max="2500"
+                step="50"
                 value={hourlyRate}
                 onChange={(e) => setHourlyRate(Number(e.target.value))}
                 className="w-full h-2 bg-black/60 rounded-lg appearance-none cursor-pointer accent-[#FF5722]"
               />
               <div className="flex justify-between text-[10px] text-gray-500">
-                <span>$18 / hr</span>
-                <span>$60 / hr</span>
-                <span>$120 / hr</span>
+                <span>₹150 / hr</span>
+                <span>₹500 / hr</span>
+                <span>₹2,500 / hr</span>
               </div>
             </div>
           </div>
@@ -110,8 +110,8 @@ export default function RoiCalculator() {
               Estimated Annual Savings
             </span>
             <div className="text-4xl sm:text-5xl font-black text-white mt-2 font-mono flex items-baseline gap-1">
-              <span className="text-[#FF5722] text-3xl">$</span>
-              <span>{annualDollarSavings.toLocaleString()}</span>
+              <span className="text-[#FF5722] text-3xl">₹</span>
+              <span>{annualSavings.toLocaleString()}</span>
               <span className="text-xs font-normal text-gray-400 font-sans">/ year</span>
             </div>
             <p className="text-xs text-emerald-400 mt-1 flex items-center gap-1">

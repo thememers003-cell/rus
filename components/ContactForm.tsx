@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { CheckCircle2, Send, Sparkles, AlertCircle, ArrowRight } from "lucide-react";
 import { COMPANY_DATA } from "@/data/company";
 
@@ -13,7 +14,8 @@ const servicesList = [
   "Bespoke Enterprise Engineering",
 ];
 
-export default function ContactForm() {
+function ContactFormInner() {
+  const searchParams = useSearchParams();
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -26,6 +28,29 @@ export default function ContactForm() {
   const [selectedServices, setSelectedServices] = useState<string[]>([
     "RiseVoice AI (Conversational Agent)",
   ]);
+
+  useEffect(() => {
+    const tier = searchParams.get("tier");
+    if (tier === "rapid-launch") {
+      setSelectedServices(["Bespoke Enterprise Engineering", "RiseVoice AI (Conversational Agent)"]);
+      setFormData((prev) => ({
+        ...prev,
+        message: "Inquiry for Rapid Launch Plan (₹49,000 / sprint). We would like to fast-track an MVP validation.",
+      }));
+    } else if (tier === "growth-engine") {
+      setSelectedServices(["RiseERP Omnichannel (Operations/POS)", "Bespoke Enterprise Engineering"]);
+      setFormData((prev) => ({
+        ...prev,
+        message: "Inquiry for Growth & Scale Engine Plan (₹1,49,000 / month). We require complete end-to-end automation.",
+      }));
+    } else if (tier === "enterprise-titan") {
+      setSelectedServices(["Bespoke Enterprise Engineering"]);
+      setFormData((prev) => ({
+        ...prev,
+        message: "Inquiry for Enterprise Architecture (₹2,49,000 / engagement). Bespoke high-scale enterprise deployment.",
+      }));
+    }
+  }, [searchParams]);
 
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
@@ -252,5 +277,13 @@ export default function ContactForm() {
         Strict confidentiality guaranteed. We adhere to enterprise NDAs and zero spam policy.
       </div>
     </form>
+  );
+}
+
+export default function ContactForm() {
+  return (
+    <Suspense fallback={<div className="glass-panel rounded-2xl p-8 text-center text-gray-400 text-sm">Loading Architecture Form...</div>}>
+      <ContactFormInner />
+    </Suspense>
   );
 }

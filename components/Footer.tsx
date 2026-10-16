@@ -246,10 +246,8 @@ export default function Footer() {
           <div>
             © {new Date().getFullYear()} {COMPANY_DATA.legalName}. All rights reserved.
           </div>
-          <div className="flex items-center gap-6">
-            <span className="text-gray-500">Privacy Policy</span>
-            <span className="text-gray-500">Terms of Service</span>
-            <span className="text-gray-500">Security Specs</span>
+          <div className="text-gray-500 font-mono text-[11px]">
+            Engineered in India • Enterprise Cloud Telemetry & AI Systems
           </div>
         </div>
       </div>
