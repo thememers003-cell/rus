@@ -79,13 +79,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="inline-flex items-center gap-3 group">
-              <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-full p-[2px] bg-gradient-to-tr from-[#1E2026] via-[#2A2D35] to-[#141519] ring-1 ring-white/20 group-hover:ring-[#FF5722]/80 shadow-[0_0_20px_rgba(255,87,34,0.3)] group-hover:shadow-[0_0_28px_rgba(255,87,34,0.6)] transition-all duration-300">
-                <div className="w-full h-full rounded-full bg-white flex items-center justify-center p-1 overflow-hidden shadow-inner">
+            <Link href="/" className="inline-flex items-center gap-2.5 sm:gap-3 group">
+              <div className="relative w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full p-[1.5px] bg-gradient-to-tr from-[#1E2026] via-[#2A2D35] to-[#141519] ring-1 ring-white/20 group-hover:ring-[#FF5722]/80 shadow-[0_0_15px_rgba(255,87,34,0.25)] transition-all duration-300 flex-shrink-0">
+                <div className="w-full h-full rounded-full bg-white flex items-center justify-center p-0.5 sm:p-1 overflow-hidden shadow-inner">
                   <img
                     src="/logo.png"
                     alt="RISEUP SOLUTIONS"
-                    className="w-full h-full object-contain scale-[1.3] transform group-hover:scale-[1.38] transition-transform duration-300"
+                    className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>

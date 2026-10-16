@@ -65,22 +65,22 @@ export default function Navbar({ onOpenDemo }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Brand Logo - Premium Circular Emblem */}
-          <Link href="/" className="flex items-center gap-2 sm:gap-3 group">
-            <div className="relative w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full p-[2px] bg-gradient-to-tr from-[#1E2026] via-[#2A2D35] to-[#141519] ring-1 ring-white/20 group-hover:ring-[#FF5722]/80 shadow-[0_0_20px_rgba(255,87,34,0.3)] group-hover:shadow-[0_0_28px_rgba(255,87,34,0.6)] transition-all duration-300 flex-shrink-0">
-              <div className="w-full h-full rounded-full bg-white flex items-center justify-center p-1 overflow-hidden shadow-inner">
+          <Link href="/" className="flex items-center gap-2 sm:gap-2.5 group flex-shrink-0">
+            <div className="relative w-7 h-7 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full p-[1.5px] bg-gradient-to-tr from-[#1E2026] via-[#2A2D35] to-[#141519] ring-1 ring-white/20 group-hover:ring-[#FF5722]/80 shadow-[0_0_12px_rgba(255,87,34,0.25)] transition-all duration-300 flex-shrink-0">
+              <div className="w-full h-full rounded-full bg-white flex items-center justify-center p-0.5 sm:p-1 overflow-hidden shadow-inner">
                 <img
                   src="/logo.png"
                   alt="RISEUP SOLUTIONS"
-                  className="w-full h-full object-contain scale-[1.3] transform group-hover:scale-[1.38] transition-transform duration-300"
+                  className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               {/* Micro orbit accent dot */}
-              <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#090A0C] flex items-center justify-center">
+              <span className="absolute -top-0.5 -right-0.5 w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#090A0C] flex items-center justify-center">
                 <span className="w-1 sm:w-1.5 h-1 sm:h-1.5 rounded-full bg-[#FF5722]" />
               </span>
             </div>
 
-            <span className="font-display font-black text-sm sm:text-base md:text-lg tracking-tight text-white whitespace-nowrap group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-[#FF8A65] transition-all">
+            <span className="font-display font-black text-xs sm:text-base md:text-lg tracking-tight text-white whitespace-nowrap group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-[#FF8A65] transition-all">
               RISEUP SOLUTIONS
             </span>
           </Link>
@@ -228,30 +228,35 @@ export default function Navbar({ onOpenDemo }: NavbarProps) {
           </nav>
 
           {/* Right Action Buttons */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-2.5">
+            {/* Advisor Phone Button - Perfectly Matches Schedule Demo Button Height & Style */}
             <a
               href={`tel:${COMPANY_DATA.advisor.phone}`}
-              className="hidden xl:flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white border border-white/10 transition-colors"
+              className="inline-flex items-center gap-2 h-10 px-4 rounded-full bg-[#141519] hover:bg-[#1D1E24] border border-white/10 hover:border-[#FF5722]/60 text-xs font-bold text-white shadow-sm transition-all whitespace-nowrap flex-shrink-0 group/phone"
               title={`Talk to our Advisor: ${COMPANY_DATA.advisor.name}`}
             >
-              <PhoneCall className="w-3.5 h-3.5 text-[#FF5722]" />
-              <span>Advisor: {COMPANY_DATA.advisor.displayPhone}</span>
+              <PhoneCall className="w-3.5 h-3.5 text-[#FF5722] group-hover/phone:rotate-12 transition-transform flex-shrink-0" />
+              <span>
+                Advisor: <span className="font-mono text-[#FF8A65]">{COMPANY_DATA.advisor.displayPhone}</span>
+              </span>
             </a>
 
+            {/* Email link - Shown on wider desktops */}
             <a
               href={`mailto:${COMPANY_DATA.contact.email}`}
-              className="text-xs font-semibold px-3 py-2 text-gray-300 hover:text-white flex items-center gap-1.5 transition-colors"
+              className="hidden 2xl:flex items-center gap-1.5 text-xs font-semibold px-3 h-10 text-gray-300 hover:text-white transition-colors whitespace-nowrap flex-shrink-0"
             >
               <Mail className="w-3.5 h-3.5 text-[#FF5722]" />
               <span>{COMPANY_DATA.contact.email}</span>
             </a>
 
+            {/* Schedule Demo Button */}
             <Link
               href="/contact"
-              className="relative inline-flex items-center justify-center px-5 py-2.5 text-xs font-bold text-white transition-all bg-[#FF5722] hover:bg-[#FF6D3B] rounded-full shadow-[0_4px_20px_rgba(255,87,34,0.35)] hover:shadow-[0_6px_28px_rgba(255,87,34,0.5)] transform hover:-translate-y-0.5"
+              className="relative inline-flex items-center justify-center h-10 px-5 text-xs font-extrabold text-white transition-all bg-[#FF5722] hover:bg-[#FF6D3B] rounded-full shadow-[0_4px_20px_rgba(255,87,34,0.35)] hover:shadow-[0_6px_28px_rgba(255,87,34,0.5)] transform hover:-translate-y-0.5 whitespace-nowrap flex-shrink-0 gap-1.5"
             >
               <span>Schedule Demo</span>
-              <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
+              <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
 
@@ -332,6 +337,13 @@ export default function Navbar({ onOpenDemo }: NavbarProps) {
               >
                 Schedule Interactive Demo
               </Link>
+              <a
+                href={`tel:${COMPANY_DATA.advisor.phone}`}
+                className="w-full text-center py-2.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors"
+              >
+                <PhoneCall className="w-3.5 h-3.5 text-[#FF5722]" />
+                <span>Advisor: {COMPANY_DATA.advisor.displayPhone}</span>
+              </a>
               <div className="text-center text-xs text-gray-400 pt-1">
                 Support: {COMPANY_DATA.contact.email}
               </div>

@@ -287,23 +287,23 @@ export default function CylinderTextHero() {
           <div 
             className="relative z-20 flex flex-col items-center justify-center group pointer-events-auto transition-transform duration-300 ease-out animate-float-gentle"
           >
-            {/* Pulsing Solar Corona Flare - Scaled down */}
-            <div className="absolute w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full bg-gradient-to-tr from-[#FF3D00] via-[#FF5722] to-[#FFA07A] blur-[24px] sm:blur-[34px] opacity-45 group-hover:opacity-70 transition-opacity duration-700 pointer-events-none animate-corona-breath" />
+            {/* Pulsing Solar Corona Flare - Balanced for mobile & desktop */}
+            <div className="absolute w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-44 lg:h-44 rounded-full bg-gradient-to-tr from-[#FF3D00] via-[#FF5722] to-[#FFA07A] blur-[18px] sm:blur-[30px] opacity-45 group-hover:opacity-70 transition-opacity duration-700 pointer-events-none animate-corona-breath" />
 
-            {/* Rotating Solar Astrolabe Ticks Ring - Scaled down */}
-            <div className="absolute w-22 h-22 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full border border-dashed border-[#FF8A65]/35 animate-[spin_90s_linear_infinite] pointer-events-none" />
+            {/* Rotating Solar Astrolabe Ticks Ring */}
+            <div className="absolute w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-full border border-dashed border-[#FF8A65]/35 animate-[spin_90s_linear_infinite] pointer-events-none" />
 
-            {/* Circular Sun Core Disc - Decreased size, perfectly proportioned */}
-            <div className="relative w-18 h-18 sm:w-24 sm:h-24 md:w-30 md:h-30 lg:w-34 lg:h-34 rounded-full p-[2px] sm:p-[3px] bg-gradient-to-tr from-[#1E2026] via-[#2D313B] to-[#121316] ring-2 ring-white/20 group-hover:ring-[#FF5722] shadow-[0_0_25px_rgba(255,87,34,0.3)] sm:shadow-[0_0_35px_rgba(255,87,34,0.38)] transition-all duration-500 transform group-hover:scale-105">
+            {/* Circular Sun Core Disc - Clean, sleek, perfectly proportioned on phones (48px) and desktop (112px) */}
+            <div className="relative w-12 h-12 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full p-[1.5px] sm:p-[2.5px] bg-gradient-to-tr from-[#1E2026] via-[#2D313B] to-[#121316] ring-1.5 sm:ring-2 ring-white/20 group-hover:ring-[#FF5722] shadow-[0_0_18px_rgba(255,87,34,0.3)] sm:shadow-[0_0_35px_rgba(255,87,34,0.38)] transition-all duration-500 transform group-hover:scale-105">
               {/* Clean White Inner Jewel Housing the Logo */}
-              <div className="relative w-full h-full rounded-full bg-white p-1.5 sm:p-2 md:p-2.5 flex items-center justify-center shadow-inner overflow-hidden border border-white">
+              <div className="relative w-full h-full rounded-full bg-white p-1 sm:p-2 md:p-2.5 flex items-center justify-center shadow-inner overflow-hidden border border-white">
                 {/* Luxury Diagonal Shimmer Light Sweep */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/70 to-transparent pointer-events-none animate-shimmer-sweep w-[50%] h-full transform -skew-x-12" />
 
                 <img
                   src="/logo.png"
                   alt="RISEUP SOLUTIONS"
-                  className="w-full h-full object-contain scale-[1.12] sm:scale-[1.15] md:scale-[1.18] transform filter drop-shadow-sm group-hover:scale-[1.22] transition-transform duration-500 relative z-10"
+                  className="w-full h-full object-contain transform filter drop-shadow-sm group-hover:scale-105 transition-transform duration-500 relative z-10"
                 />
               </div>
             </div>

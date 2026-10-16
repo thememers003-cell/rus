@@ -76,14 +76,14 @@ export default function BottomCtaBanner() {
 
           {/* Right Stage: Advisor & RISEUPSOLUTIONS Brand Showcase */}
           <div className="lg:col-span-4 flex justify-center lg:justify-end">
-            <div className="relative w-64 sm:w-72 rounded-2xl overflow-hidden border border-[#FF5722]/30 bg-gradient-to-b from-[#181920] to-[#0D0E12] shadow-2xl flex flex-col items-center justify-center p-6 group">
+            <div className="relative w-56 sm:w-64 md:w-72 rounded-2xl overflow-hidden border border-[#FF5722]/30 bg-gradient-to-b from-[#181920] to-[#0D0E12] shadow-2xl flex flex-col items-center justify-center p-4 sm:p-5 group">
               <div className="absolute inset-0 bg-radial-gradient from-[#FF5722]/15 via-transparent to-transparent pointer-events-none" />
               
               <div className="bg-white rounded-xl p-4 w-full flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
                 <img
                   src="/logo.png"
                   alt="RISEUPSOLUTIONS"
-                  className="w-full h-auto object-contain max-h-16"
+                  className="w-full h-auto object-contain max-h-12 sm:max-h-14"
                 />
               </div>
               
