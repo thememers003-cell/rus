@@ -19,11 +19,23 @@
     overflow-x: hidden;
   }
 
-  /* Custom Luxury Cursor Active Only on Precision Pointer Screens */
+  /* Custom Luxury Cursor Active Only on Precision Pointer Screens (except in print kiosk mode) */
   @media (pointer: fine) {
-    body, a, button, input, select, textarea, [role="button"], .cursor-pointer {
+    body:not(.print-kiosk-mode),
+    body:not(.print-kiosk-mode) a,
+    body:not(.print-kiosk-mode) button,
+    body:not(.print-kiosk-mode) input,
+    body:not(.print-kiosk-mode) select,
+    body:not(.print-kiosk-mode) textarea,
+    body:not(.print-kiosk-mode) [role="button"],
+    body:not(.print-kiosk-mode) .cursor-pointer {
       cursor: none !important;
     }
+  }
+
+  body.print-kiosk-mode {
+    overflow: hidden !important;
+    cursor: auto !important;
   }
 
   ::selection {

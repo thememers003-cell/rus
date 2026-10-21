@@ -54,6 +54,11 @@ export default function Navbar({ onOpenDemo }: NavbarProps) {
     setProductsDropdownOpen(false);
   }, [pathname]);
 
+  // Masked route isolation: Do not render site navbar on /print route
+  if (pathname?.startsWith("/print")) {
+    return null;
+  }
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${

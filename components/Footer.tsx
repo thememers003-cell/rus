@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { 
   ArrowRight, 
   Mail, 
@@ -15,8 +16,14 @@ import { COMPANY_DATA } from "@/data/company";
 import { PRODUCTS_DATA } from "@/data/products";
 
 export default function Footer() {
+  const pathname = usePathname();
   const [emailInput, setEmailInput] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+
+  // Masked route isolation: Do not render site footer on /print route
+  if (pathname?.startsWith("/print")) {
+    return null;
+  }
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();

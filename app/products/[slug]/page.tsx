@@ -87,6 +87,16 @@ export default function ProductDetailPage({ params }: Props) {
 
               {/* Action Buttons */}
               <div className="pt-4 flex flex-col sm:flex-row items-center gap-4">
+                {product.slug === "cloud-printing-solutions" && (
+                  <Link
+                    href="/print"
+                    className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-bold text-sm shadow-xl shadow-sky-500/30 transition-all flex items-center justify-center gap-2"
+                  >
+                    <span>Launch Cloud Kiosk App (/print)</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                )}
+
                 <Link
                   href="/contact"
                   className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-brand-blue to-blue-600 hover:from-brand-blue-hover hover:to-blue-700 text-white font-semibold text-sm shadow-xl shadow-brand-blue/30 transition-all flex items-center justify-center gap-2"

@@ -1,10 +1,17 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function RealtimeBackground() {
+  const pathname = usePathname();
   const [mousePos, setMousePos] = useState({ x: -500, y: -500 });
   const [scrollProgress, setScrollProgress] = useState(0);
+
+  // Masked route isolation: Do not render background canvas/effects on /print route
+  if (pathname?.startsWith("/print")) {
+    return null;
+  }
 
   useEffect(() => {
     let animationFrameId: number;

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState, useRef, useCallback } from "react";
+import { usePathname } from "next/navigation";
 import { Volume2, VolumeX, Sparkles } from "lucide-react";
 
 interface TrailPoint {
@@ -10,6 +11,7 @@ interface TrailPoint {
 }
 
 export default function LuxuryAudioAndCursor() {
+  const pathname = usePathname();
   const [isAudioEnabled, setIsAudioEnabled] = useState(false);
   const [cursorPos, setCursorPos] = useState({ x: -100, y: -100 });
   const [trailingPos, setTrailingPos] = useState({ x: -100, y: -100 });
@@ -328,6 +330,11 @@ export default function LuxuryAudioAndCursor() {
       cancelAnimationFrame(animId);
     };
   }, [playHoverSound, playClickSound]);
+
+  // Masked route isolation: Do not render custom cursor or audio controls on /print route
+  if (pathname?.startsWith("/print")) {
+    return null;
+  }
 
   return (
     <>
